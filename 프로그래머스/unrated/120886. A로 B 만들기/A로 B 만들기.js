@@ -1,5 +1,4 @@
 function solution(before, after) {
-    console.log(sortString(before), sortString(after))
     return sortString(before) === sortString(after) ? 1 : 0;
 }
 
