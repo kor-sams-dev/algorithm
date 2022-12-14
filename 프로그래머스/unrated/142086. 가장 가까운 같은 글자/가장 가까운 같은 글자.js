@@ -5,15 +5,11 @@ function solution(s) {
     //     return acc
     // }, {result:[], word:{}}).result
     const result = []
+    const obj = {}
+    
     for(let i = 0; i < s.length; i++){
-        let leng = -1;
-        
-        for(let k = i-1; k >= 0; k--){
-            if(s[i] === s[k]){
-                leng = i - k
-                break;
-            }
-        }
+        let leng = obj[s[i]] === undefined ? -1 : i - obj[s[i]];
+        obj[s[i]] = i
         result.push(leng)
     }
     
